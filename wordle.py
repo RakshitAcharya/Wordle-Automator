@@ -1,3 +1,4 @@
+
 def creating_list():
     allowed_guesses = []
     with open("allowed guesses.txt", "r") as file:
@@ -18,14 +19,20 @@ def main():
     chances = 1
     fixed = ["_","_","_","_","_"]
     fixed_index = []
-    unfixed = []
+    unfixed = {}
     greys = []
     
     while chances < 7:
         len_flag = True
         while(len_flag):
             print("*****TRY "+str(chances)+"*****")
-            word = input("ENTER YOUR INPUT : ")
+            valid_flag = True
+            while(valid_flag):
+                word = input("ENTER YOUR INPUT : ")
+                if word in allowed_guesses:
+                    valid_flag = False
+                else:
+                    print("INVALID  guess retry boss ")
         
         
             if len(word) == 5:
@@ -81,7 +88,10 @@ def main():
                                 print("Enter an integer ")
                             else:
                                 flag4 = False
-                        unfixed.append(word[yellow_index])
+                        if word[yellow_index] in unfixed:
+                            unfixed[word[yellow_index]].append(yellow_index)
+                        else:
+                            unfixed[word[yellow_index]] = [yellow_index]
                         for_grey_index.append(yellow_index)
                 
 
@@ -97,13 +107,13 @@ def main():
                             break
                     if flag:
                         next_guesses.append(i)
-
+                
                 next_guesses_f = []
                 for i in next_guesses:
                     flag = True
-                    for letter in unfixed:
+                    for letter,positions in unfixed.items():
                         for x in greys:
-                            if (x in i) or (letter not in i):
+                            if (x in i) or (letter not in i) or (i.index(letter) in positions):
                                     flag = False
                                     break
                     if flag == True:
@@ -119,9 +129,9 @@ def main():
                 better_guesses_f = []
                 for i in better_guesses:
                     flag = True
-                    for letter in unfixed:
+                    for letter,positions in unfixed.items():
                         for x in greys:
-                            if (x in i) or (letter not in i):
+                            if (x in i) or (letter not in i) or (i.index(letter) in positions):
                                 flag = False
                                 break
                     if flag == True:
@@ -129,8 +139,8 @@ def main():
 
                 better_guesses_f2 = []
 
-                print(better_guesses_f)
-                print(greys)
+                #print(better_guesses_f)
+                #print(greys)
                 for i in better_guesses_f:
                     flag5 = True
                     for x in greys:
@@ -139,11 +149,13 @@ def main():
                             break
                     if flag5:
                         better_guesses_f2.append(i)
-
+                
                 if len(better_guesses_f) > 200:
                     print("TOO many options ")
                 else:
+                    
                     print("\n\n VERY PROBABLE WORDS :")
+                    print("hi")
                     print(better_guesses_f2)
 
                 #print("\n\n ALL THE AVAILABLE WORDS : \n\n")
