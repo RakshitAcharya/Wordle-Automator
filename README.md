@@ -34,3 +34,7 @@ shape,
 shave.
 
 After guessing "SHAKE" in the third guess, the algorithm deems shade, shame, shade and shake to have equal probability and thus unluckily "shave" turns out to be the 7th guess.  
+
+
+### CREDITS :
+Youtube channel :3blue1brown
