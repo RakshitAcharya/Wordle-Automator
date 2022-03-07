@@ -37,4 +37,4 @@ After guessing "SHAKE" in the third guess, the algorithm deems shade, shame, sha
 
 
 ### CREDITS :
-Youtube channel :3blue1brown
+Youtube channel : [https://www.youtube.com/c/3blue1brown](https://www.youtube.com/c/3blue1brown)
