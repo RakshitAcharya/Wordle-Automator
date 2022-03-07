@@ -11,7 +11,8 @@ In this project I have built an automator that can solve the game automatically 
 
 Out of the 2117 words given in the wordle website, the average score was around 4 and only 15 words took more than 6 guesses.
 
-insert image here 
+<img width="476" alt="analysis" src="https://user-images.githubusercontent.com/69286061/157077554-ffb43ad0-ae2a-416b-b68a-91223785537d.png">
+
 
 
 ## SCOPE OF IMPROVEMENT
