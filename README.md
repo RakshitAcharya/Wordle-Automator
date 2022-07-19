@@ -36,5 +36,7 @@ shave.
 After guessing "SHAKE" in the third guess, the algorithm deems shade, shame, shape and shake to have equal probability and thus unluckily "shave" turns out to be the 7th guess.  
 
 
+The solver is tested on the words given in the website, but for further development, inputting the guess directly to the website, get the clues directly without any human intervention can be developed to automatically solve the game every 24hrs.
+
 ### CREDITS :
 Youtube channel : [https://www.youtube.com/c/3blue1brown](https://www.youtube.com/c/3blue1brown)
